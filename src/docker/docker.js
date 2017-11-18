@@ -1,8 +1,6 @@
 'use strict'
-//const Docker = require('dockerode')
-//const dockerSettings = new Docker({host: 'http://35.157.178.106', port: 30000});
-//const dockerSettings = new Docker({host: 'http://35.157.178.106', port: 8080});
-//const dockerSettings = new Docker({host: 'http://172.31.27.24', port: 30000});
+const Docker = require('dockerode')
+
 const discoverRoutes = (container) => {
   return new Promise((resolve, reject) => {
     const dockerSettings = container.resolve('dockerSettings')
@@ -10,8 +8,7 @@ const discoverRoutes = (container) => {
     const docker = new Docker(dockerSettings)
     console.log(docker)
     const getUpstreamUrl = (serviceDetails) => {
-      //console.log(serviceDetails.Endpoint.Spec.Ports[0])
-        //console.log(dockerSettings.host)
+
       const {PublishedPort} = serviceDetails.Endpoint.Spec.Ports[0]
       return `http://${dockerSettings.host}:${PublishedPort}`
     }
@@ -34,6 +31,10 @@ const discoverRoutes = (container) => {
           console.log(`Get properties from -> "${key}" container`)
           return Reflect.get(target, key)
         },
+        console.log("Target " +target)
+        console.log("Key " + key)
+        console.log("Value" +value)
+
         set (target, key, value) {
           console.log('Setting properties', key, value)
           return Reflect.set(target, key, value)

@@ -7,7 +7,7 @@ describe('Docker Connection', () => {
   it('should connect with docker', (done) => {
 
     //const dockerSettings = new Docker({host: 'http://35.157.178.106', port: 30000});
-    /const dockerSettings = new Docker({host: 'http://35.157.178.106', port: 8080});
+    //const dockerSettings = new Docker({host: 'http://35.157.178.106', port: 8080});
 
     //const docker = new Docker(dockerSettings)
 
