@@ -2,8 +2,10 @@
 
 eval `docker-machine env bankinstance02`
 
+
 array=('./portainer_elk'
 )
+
 
 # we go to the root of the project
 cd ..
