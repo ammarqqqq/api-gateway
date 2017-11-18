@@ -2,8 +2,8 @@
 
 eval `docker-machine env bankinstance01`
 
-array=('./transactionservice'
-)
+#array=('./transactionservice'
+#)
 
 # we go to the root of the project
 cd ..
