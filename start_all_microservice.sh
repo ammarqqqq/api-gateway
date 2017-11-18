@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-eval `docker-machine env manager1`
+eval `docker-machine env bankinstance01`
 
 array=('./transactionservice'
 )

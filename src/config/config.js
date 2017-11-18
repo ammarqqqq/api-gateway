@@ -5,7 +5,7 @@ const serverSettings = {
   port: process.env.PORT || 8080
   ssl: require('./ssl')
 }
-/*export DOCKER_TLS_VERIFY="1"
+export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="unix:///var/run/docker.sock"
 export DOCKER_CERT_PATH="/home/ubuntu/.docker/certs"
 const machine = process.env.DOCKER_HOST
@@ -14,7 +14,7 @@ const certDir = process.env.DOCKER_CERT_PATH
 console.log("Machine " + machine)
 console.log("TLS "+ tls)
 console.log("CertDir" + certDir)*/
-/*if (!machine) {
+if (!machine) {
   throw new Error('You must set the DOCKER_HOST environment variable')
 }
 if (tls === 1) {
@@ -22,7 +22,7 @@ if (tls === 1) {
 }
 if (!certDir) {
   throw new Error('You must set the DOCKER_CERT_PATH environment variable')
-}*/
+}
 
 const dockerSettings = {
   protocol: 'https',
