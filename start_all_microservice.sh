@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-eval `docker-machine env bankinstance01`
+eval `docker-machine env bankinstance02`
 
-array=('./transactionservice'
+array=('./portainer_elk'
 )
 
 # we go to the root of the project
